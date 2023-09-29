@@ -1,19 +1,23 @@
 
 *{
-    background-color: gray;
     padding: 0;
     margin: 0;
+}
+
+html{
+    height: 100vh;
 }
 
 .main-container{
     display: grid;
     grid-template-columns:  0.3fr repeat(2,1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows:  .6fr repeat(2, 1fr);
     height: 100vh;
     width: 100vw;
 }
 
 .side-bar{
+    background-color: lightblue;
     grid-area: 1/1/4/2;
     display: grid;
     grid-template-rows: 0.3fr 0.5fr 1fr;
@@ -64,13 +68,85 @@
 }
 .header{
     grid-area: 1/2/2/4;
+    display: grid;
+    box-shadow: 0px 15px 10px -15px #111;
+}
+
+.header-top{
+    display: grid;
+    grid-template-columns: 100px .9fr 200px 100px auto;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+}
+
+.header-top .input{
+    height: 35px;
+    border-radius: 20px;
+    background-color: lightgray;
+}
+
+.header-top .resize{
+    justify-self: end;
+    padding-right: 30px;
+}
+
+.header-top p{
+    font-size: 1.6em;
+    font-weight: bolder;
+}
+
+.header-bottom{
+    display: grid;
+    grid-template-columns: 150px .9fr repeat(3, 200px) auto;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+    
+}
+
+.header-bottom h6{
+    font-size: 1.6em;
+}
+
+.header-bottom p{
+    font-weight: bolder;
+    font-size: 1.8em;
+}
+
+.header-bottom .btn{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
+
+.header-bottom .button{
+    height: 50px;
+    width: 150px;
+    border-radius: 40px;
+    color: white;
+    background-color: lightblue;
+    border: none;
+    font-size: 1.2em;
+    justify-self: end;
 }
 
 .main-content{
     grid-area: 2/2/4/4;
+    background-color: azure;
 }
 .resize{
     height: 30px;
+}
+
+.pfp{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.pfp2{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    justify-self: center;
 }
 img{
     height: 20px;
