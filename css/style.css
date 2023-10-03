@@ -4,16 +4,11 @@
     margin: 0;
 }
 
-html{
-    height: 100vh;
-}
 
 .main-container{
     display: grid;
     grid-template-columns:  0.3fr repeat(2,1fr);
-    grid-template-rows:  .6fr repeat(2, 1fr);
-    height: 100vh;
-    width: 100vw;
+    grid-template-rows:  .3fr repeat(2, 1fr);
 }
 
 .side-bar{
@@ -69,7 +64,9 @@ html{
 .header{
     grid-area: 1/2/2/4;
     display: grid;
-    box-shadow: 0px 15px 10px -15px #111;
+    /* box-shadow: 0px 15px 10px -15px #111; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 0;
 }
 
 .header-top{
@@ -131,6 +128,95 @@ html{
 .main-content{
     grid-area: 2/2/4/4;
     background-color: azure;
+    display: grid;
+    grid-template-columns: 2fr .7fr;
+    grid-template-rows: .3fr repeat(3, 1fr);
+    padding: 20px;
+    gap: 20px;
+}
+
+.main-left{
+
+    grid-area: 1/1/5/2;
+    display: grid;
+    grid-template-rows: .3fr repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+
+.main-left .title{
+    font-size: 2.2em;
+    font-weight: 900;
+    display: grid;
+    align-content: center;
+}
+
+.main-left .project{
+    background-color: wheat;
+    padding: 40px;
+    border-left: 8px solid orange;
+    border-radius: 10px;
+}
+
+.main-left .project p{
+    font-size: 1.2em;
+}
+
+.main-left .project h2{
+    margin-bottom: 10px;
+}
+
+.main-left .one{
+    grid-column: 1;
+} 
+
+.main-left .project .images{
+    display: grid;
+    justify-content: end;
+    grid-template-columns: repeat(3, 50px);
+    margin-top: 50px;
+}
+
+.main-right{
+    grid-area: 1/2/5/3;
+    display: grid;
+    gap: 80px;
+    justify-content: center;
+}
+
+.main-right-top{
+    display: grid;
+    grid-template-rows: .25fr 1fr;
+}
+
+.main-right-top .announcements p{
+    width: 350px;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid black;
+}
+
+.main-right-top .announcements h2{
+    margin-top: 20px;
+}
+
+.main-right-top .announcements{
+    background-color: wheat;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.main-right-top .title, .main-right-bottom .title{
+    font-size: 2.2em;
+    font-weight: 900;
+    display: grid;
+    align-content: center;
+
+}
+
+.main-right-bottom{
 }
 .resize{
     height: 30px;
@@ -151,3 +237,13 @@ html{
 img{
     height: 20px;
 }
+
+
+@media only screen and (max-width: 1725px) {
+
+    .main-container{
+    
+        height: 100%; 
+    
+    }
+} 
