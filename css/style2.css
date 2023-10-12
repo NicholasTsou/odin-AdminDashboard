@@ -1,0 +1,256 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: 2px solid red;
+}
+
+.resize{
+    height: 30px;
+}
+
+.pfp{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.pfp2{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    justify-self: center;
+}
+
+main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-rows: 1fr 6fr;
+
+
+}
+
+nav{
+    grid-area: 1/1/3/2;
+    /* gap: 5rem; */
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+    padding: 0 4rem 0 4rem;
+    background-color: #16c6ff;
+    color: white;
+}
+
+nav .logo{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+nav .logo li{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+nav h1{
+    display: grid;
+    font-size: 2em;
+}
+
+nav .middle, nav .bottom{
+    list-style: none;
+    gap: 1rem;
+}
+
+nav .middle{
+    display: grid;
+    grid-template-rows: repeat(6, 50px);
+}
+
+nav .middle li{
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: center;
+    padding-left: 30px;
+    background-color: rgb(3, 1, 167);
+    border-radius: 50px;
+}
+
+nav .middle li p{
+    padding-left: 20px;
+}
+
+nav .bottom{
+    display: grid;
+    grid-template-rows: repeat(3, 50px) 0px;
+}
+
+nav .bottom li{
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: center;
+    padding-left: 30px;
+    background-color: rgb(3, 1, 167);
+    border-radius: 50px;
+}
+
+nav .bottom li p{
+    padding-left: 20px;
+}
+
+header{
+    grid-area: 1/2/2/4;
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 0;
+
+}
+
+.header-top{
+    display: grid;
+    grid-template-columns: 100px .9fr 200px 100px auto;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+}
+
+.header-top .input{
+    height: 35px;
+    border-radius: 20px;
+    background-color: lightgray;
+}
+
+.header-top .resize{
+    justify-self: end;
+    padding-right: 30px;
+}
+
+.header-top p{
+    font-size: 1.6em;
+    font-weight: bolder;
+}
+
+.header-bottom{
+    display: grid;
+    grid-template-columns: 150px .9fr repeat(3, 200px) auto;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+    
+}
+
+.header-bottom h6{
+    font-size: 1.6em;
+}
+
+.header-bottom p{
+    font-weight: bolder;
+    font-size: 1.8em;
+}
+
+.header-bottom .btn{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+}
+
+.header-bottom .button{
+    height: 50px;
+    width: 150px;
+    border-radius: 40px;
+    color: white;
+    background-color: rgb(3, 1, 167);
+    border: none;
+    font-size: 1.2em;
+    justify-self: end;
+}
+
+.project-section{
+    padding: 20px;
+    background-color: #d0dee1;
+}
+
+.project-section h2{
+    margin-bottom: 10px;
+}
+.projects{
+    grid-area: 2/2/3/3;
+    display: grid;
+    grid-template-rows: .3fr repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:20px;
+}
+
+.projects .project{
+    background-color: white;
+    padding:  20px 10px 10px 30px;
+    border-left: 8px solid orange;
+    border-radius: 10px;
+}
+
+.projects .project .images{
+    display: grid;
+    grid-template-columns: repeat(3, 30px);
+    justify-content: end;
+}
+
+.projects .project p{
+    margin-bottom: 15px;
+}
+.right-side{
+    grid-area: 2/3/3/4;
+    padding: 20px;
+    background-color: #d0dee1;
+}
+
+
+
+.main-right-top .title, .main-right-bottom .title{
+    margin-bottom: 10px;
+}
+
+.main-right-top .announcements{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 100px);
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+
+}
+
+
+.main-right-bottom .people{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    gap: 30px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.main-right-bottom .people .user{
+    display: grid;
+    grid-template-columns: 50px 180px;
+    align-self: center;
+}
+
+.main-right-bottom .names h6{
+    font-size: 1.2rem;
+}
+
+.main-right-bottom .names p{
+    font-size: 1.3rem;
+}
+.card-one, .card-two, .card-three{
+    border-bottom: 1px solid black;
+    margin: 10px 0px 0px 10px;
+}
+
+.card-one p, .card-two p, .card-three p{
+    margin-bottom: 30px;
+}
+
+main .logo img{
+    height: 65px;
+}
