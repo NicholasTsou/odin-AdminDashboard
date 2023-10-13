@@ -212,8 +212,8 @@ header{
 .main-right-top .announcements{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(3, 100px);
-    padding: 20px;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 1rem;
     background-color: white;
     border-radius: 20px;
 
@@ -226,7 +226,7 @@ header{
     gap: 30px;
     background-color: white;
     border-radius: 20px;
-    padding: 20px;
+    padding: 1rem;
 }
 
 .main-right-bottom .people .user{
